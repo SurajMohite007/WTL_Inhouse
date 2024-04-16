@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Info</title>
+</head>
+<body>
+    <h1>Teacher Info</h1>
+    <h2>Teacher Name: {{ teacher_name }}</h2>
+    
+    {% for info in teacher_info %}
+      <div class="teacher-info">
+        <p><strong>Subject:</strong> {{ info['Subject'] }}</p>
+        <p><strong>Batch:</strong> {{ info['Batch'] }}</p>
+        <p><strong>Lab:</strong> {{ info['LAB'] }}</p>
+        <p><strong>Student Count:</strong> {{ info['StudentCount'] }}</p>
+      </div>
+    {% endfor %}
+    
+    <p>Total Student Count: {{ total_student_count }}</p>
+    <p>Total Batches: {{ total_batches }}</p>
+    
+</body>
+</html>
